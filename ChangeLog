@@ -1,0 +1,36 @@
+
+2012-08-21: 1.01-2
+
+	. Added the stats routine hcass2 to the package to avoid calling
+	  undocumented internal function in the base distribution of R.
+
+2012-03-02: 1.01-1
+
+	. Added citation
+
+2011-03-20: 1.01
+
+	. Fixed incorrect clustering with methods "centroid" and "median".
+	  Thanks to Chi Ming Yau and Daniel Müllner for pointing out the error
+	  and suggesting a fix.
+	. Speed now for the most part back up to the level experienced with
+	  1.00-2 but still capable of working with larger data sets. 
+
+2011-02-06: 1.00-3
+
+	. Fixed overflow errors when the number of clustered objects is over ~45000. 
+	  The code should now be able to cluster as many as 65000 objects,
+	  given enough memory.
+
+2010-07-19: 1.00-2
+
+	. added a timing example in the help file
+
+2010-02-19: 1.00  
+
+	. added a wrapper called hclust so a fast version of hclust is used automatically after loading the
+	  package
+
+2009-11-13: 0.10-1
+
+	. flashClust now checks that the input distance actually contains some data
