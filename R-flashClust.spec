@@ -4,7 +4,7 @@
 #
 Name     : R-flashClust
 Version  : 1.01.2
-Release  : 25
+Release  : 26
 URL      : https://cran.r-project.org/src/contrib/flashClust_1.01-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/flashClust_1.01-2.tar.gz
 Summary  : Implementation of optimal hierarchical clustering
@@ -12,7 +12,6 @@ Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-flashClust-lib = %{version}-%{release}
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 No detailed description available
@@ -27,21 +26,22 @@ lib components for the R-flashClust package.
 
 %prep
 %setup -q -c -n flashClust
+cd %{_builddir}/flashClust
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571830503
+export SOURCE_DATE_EPOCH=1589533253
 
 %install
-export SOURCE_DATE_EPOCH=1571830503
+export SOURCE_DATE_EPOCH=1589533253
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
