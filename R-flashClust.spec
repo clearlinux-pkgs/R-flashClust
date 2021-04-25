@@ -4,7 +4,7 @@
 #
 Name     : R-flashClust
 Version  : 1.01.2
-Release  : 31
+Release  : 32
 URL      : https://cran.r-project.org/src/contrib/flashClust_1.01-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/flashClust_1.01-2.tar.gz
 Summary  : Implementation of optimal hierarchical clustering
@@ -33,10 +33,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1589533253
+export SOURCE_DATE_EPOCH=1619367347
 
 %install
-export SOURCE_DATE_EPOCH=1589533253
+export SOURCE_DATE_EPOCH=1619367347
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -102,4 +102,3 @@ R CMD check --no-manual --no-examples --no-codoc flashClust || :
 %defattr(-,root,root,-)
 /usr/lib64/R/library/flashClust/libs/flashClust.so
 /usr/lib64/R/library/flashClust/libs/flashClust.so.avx2
-/usr/lib64/R/library/flashClust/libs/flashClust.so.avx512
